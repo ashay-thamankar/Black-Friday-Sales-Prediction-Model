@@ -25,7 +25,7 @@ def predict_datapoint():
             User_ID=int(request.form.get("User_ID")),
             Occupation=request.form.get('Occupation'),
             Stay_In_Current_City_Years = request.form.get("Stay_In_Current_City_Years"),
-            Marital_Status = request.form.get("Marital_Status"),
+            Marital_Status = int(request.form.get("Marital_Status")),
             Product_Category_1 = request.form.get("Product_Category_1"),
             Product_Category_2 = request.form.get("Product_Category_2"),
             Gender = request.form.get("Gender"),
