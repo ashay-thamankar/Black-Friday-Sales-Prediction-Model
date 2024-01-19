@@ -3,6 +3,7 @@ import sys
 
 from src.exception import CustomException
 from src.logger import logging
+from pathlib import Path
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -26,7 +27,7 @@ class DataIngestion:
         logging.info("Entered the data ingestion method or components")
 
         try:
-            df = pd.read_csv("data\stud.csv")
+            df = pd.read_csv(Path("data\clean_short_data.csv"))
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
 

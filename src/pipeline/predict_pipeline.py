@@ -21,32 +21,41 @@ class PredictPipeline:
         
 class CustomData:
     def __init__(self,
-                 gender: str,
-                 race_ethnicity: str,
-                 parental_level_of_education:str,
-                 lunch: str,
-                 test_preparation_course:str,
-                 reading_score:str,
-                 writing_score:str
+                 User_ID: int,
+                 Occupation: int,
+                 Stay_In_Current_City_Years:int,
+                 Marital_Status: int,
+                 Product_Category_1:int,
+                 Product_Category_2:int,
+                 Gender:str,
+                 Age:str,
+                 City_Category:str
+
                  ):
-        self.gender = gender
-        self.race_ethnicity = race_ethnicity
-        self.parental_level_of_education  =parental_level_of_education
-        self.lunch = lunch
-        self.test_preparation_course = test_preparation_course
-        self.reading_score = reading_score
-        self.writing_score = writing_score    
+        self.User_ID = User_ID
+        self.Occupation = Occupation
+        self.Stay_In_Current_City_Years  =Stay_In_Current_City_Years
+        self.Marital_Status = Marital_Status
+        self.Product_Category_1 = Product_Category_1
+        self.Product_Category_2 = Product_Category_2
+        self.Gender = Gender
+        self.Age = Age
+        self.City_Category = City_Category
+
 
     def get_data_as_data_frame(self):
         try:
             custom_data_input_dict = {
-                "gender": [self.gender],
-                "race_ethnicity": [self.race_ethnicity],
-                "parental_level_of_education": [self.parental_level_of_education],
-                "lunch": [self.lunch],
-                "test_preparation_course": [self.test_preparation_course],
-                "reading_score": [self.reading_score],
-                "writing_score": [self.writing_score]
+                "User_ID": [self.User_ID],
+                "Occupation": [self.Occupation],
+                "Stay_In_Current_City_Years": [self.Stay_In_Current_City_Years],
+                "Marital_Status": [self.Marital_Status],
+                "Product_Category_1": [self.Product_Category_1],
+                "Product_Category_2": [self.Product_Category_2],
+                "Gender": [self.Gender],
+                'Age': [self.Age],
+                'City_Category': [self.City_Category]
+
             }
 
             return pd.DataFrame(custom_data_input_dict)

@@ -38,6 +38,7 @@ def evaluate_models(X_train, y_train, X_test, y_test, models):
             test_model_score = r2_score(y_test, y_test_pred)
 
             report[list(models.keys())[i]] = test_model_score
+        print(report)
         
         return report
 
